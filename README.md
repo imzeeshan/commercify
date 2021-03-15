@@ -4,26 +4,25 @@
 <a href="https://linkedin.com/in/imzeeshan">Zeeshan Chawdhary</a>
 </p>
 
-
 ## About Pickle CMS
 
-Pickle CMS is an opensource CMS, written for my book "Practical Laravel" and published by Apress. 
+Commercify is an opensource eCommerce Engine, written for my book "Practical Laravel".
 
-It uses the awesome Stisla dashboard theme and Laravel Modules to build a modular CMS. 
+It uses the awesome Stisla dashboard theme and Laravel Modules to build a modular eCommerce store.
 
-The book teaches the various aspects of CMS development.
+The book teaches the various aspects of CMS development, building an eCommerce store and a few other tricks.
 
 ##Todo
 Removed lighthouse due to conflict. Check back later for GraphQL....
 
       "nuwave/lighthouse": "^v4.16.3"
 
-##Tips 
+##Tips
 
-Run composer with 
+Run composer with
 
 COMPOSER_MEMORY_LIMIT=-1
-      
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
