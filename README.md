@@ -4,7 +4,7 @@
 <a href="https://linkedin.com/in/imzeeshan">Zeeshan Chawdhary</a>
 </p>
 
-## About Pickle CMS
+## About Commercify
 
 Commercify is an opensource eCommerce Engine, written for my book "Practical Laravel".
 
