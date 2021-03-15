@@ -1,0 +1,11 @@
+{
+    "User": true,
+    "Roles": true,
+    "Settings": true,
+    "Pages": true,
+    "Media": true,
+    "Posts": true,
+    "Products": true,
+    "Orders": true,
+    "Customers": true
+}
