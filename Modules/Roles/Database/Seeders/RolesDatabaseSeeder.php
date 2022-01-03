@@ -17,15 +17,18 @@ class RolesDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        DB::table('roles')->truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        if (env('DB_CONNECTION') != 'pgsql')
+            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
-        DB::table('roles')->insert([ 'name' => 'Admin']);
-        DB::table('roles')->insert([ 'name' => 'Editor']);
-        DB::table('roles')->insert([ 'name' => 'User']);
+        DB::table('roles')->truncate();
+
+        if (env('DB_CONNECTION') != 'pgsql')
+            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        DB::table('roles')->insert(['name' => 'Admin']);
+        DB::table('roles')->insert(['name' => 'Editor']);
+        DB::table('roles')->insert(['name' => 'User']);
 
         $this->call("Modules\Roles\Database\Seeders\PermissionsSeederTableSeeder");
-
     }
 }
