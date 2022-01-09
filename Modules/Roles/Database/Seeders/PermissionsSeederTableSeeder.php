@@ -17,9 +17,12 @@ class PermissionsSeederTableSeeder extends Seeder
     {
         Model::unguard();
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        if (env('DB_CONNECTION') != 'pgsql')
+            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('permissions')->truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        if (env('DB_CONNECTION') != 'pgsql')
+            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         DB::table('permissions')->insert([
             'permissions' => 111,
